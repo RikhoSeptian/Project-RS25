@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@100&family=Satisfy&display=swap');
+
+:root {
+    --font-color1: #31304D;
+    --font-color2: #F0ECE5;
+    --font-color3: #750E21;
+    --font-Monoton: 'Monoton', sans-serif;
+    --font-Satisfy: 'Satisfy', sans-serif;
+    --font-Poppins: 'Poppins', sans-serif;
+    --background-color1: #161A30;
+    --background-color2: #b6bbc46e;
+    --background-color3: #607274;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+a {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--background-color2);
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    transition: all 0.4s;
+    z-index: 1;
+}
+nav .sub-nav {
+    background-color: var(--background-color1);
+    width: 100%;
+    height: 30px;
+}
+nav .sub-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 100px;
+    transition: all 0.4s;
+}
+nav .sub-nav .container .sub-logo {
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Satisfy', sans-serif;
+}
+nav .sub-nav .container .sub-logo a {
+    color: var(--font-color2);
+    font-weight: 700;
+    transition: all 0.4s;
+}
+nav .sub-nav .container .sub-logo a span {
+    color: var(--font-color3);
+}
+nav .sub-nav .container .icons {
+    font-family: 'monoton', sans-serif;
+    transition: all 0.4s;
+}
+nav .sub-nav .container .icons i {
+    margin-left: 10px;
+}
+
+nav .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 100px;
+    height: 60px;
+    transition: all 0.4s;
+}
+nav .nav .logo h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: none;
+    transition: all 0.4s;
+}
+nav .nav .menu-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav .nav .menu-nav li {
+    padding-left:50px;
+}
+nav .nav .menu-nav li a {
+    font-size: 20px;
+    color: #fff;
+    transition: all 0.4s;
+}
+nav .nav .menu-nav li a:hover {
+    color: var(--font-color1);
+    padding-bottom: 4px;
+    border-bottom: 3px solid var(--font-color1);
+}
+nav .nav .menu-nav li a.active {
+    color: var(--font-color1);
+    padding-bottom: 4px;
+    border-bottom: 3px solid var(--font-color1);
+}
+
+nav.stiky {
+    position: fixed;
+    height: 70px;
+    transition: all 0.4s;
+}
+nav.stiky .sub-nav {
+    height: 23px;
+}
+nav.stiky .sub-nav .container .sub-logo {
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+}
+nav.stiky .sub-nav .container .icons {
+    font-size: 15px;
+}
+nav.stiky .nav {
+    height: 47px;
+}
+nav.stiky .nav .logo h1 {
+    font-size: 25px;
+}
+nav.stiky .nav .menu-nav li a {
+    font-size: 15px;
+}
+
+/* Header & Banner */
+header {
+    width: 100%;
+    height: 100vh;
+}
+header .container {
+    background-color: var(--background-color3);
+    max-width: 100%;
+    max-height: 100%;
+}
+header .container .banner img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    
+}
+header .container .description {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    color: #000;
+}
+header .container .description h1 {
+    font-family: var(--font-Poppins);
+    font-size: 25px;
+    font-weight: 700;
+}
+header .container .description h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--font-color1);
+}
+header .container .description p {
+    margin-top: 50px;
+    width: 500px;
+    font-size: 30px;
+    color: #fff;
+}
+
+/* Reponsive */
+@media (max-width: 376px) {
+    /* Navigation */
+    nav .sub-nav .container {
+        margin: 0 20px;
+    }
+    nav .sub-nav .container .sub-logo {
+        font-size: 15px;
+    }
+    nav .sub-nav .container .icons {
+        font-size: 15px;
+    } 
+    nav .nav {
+        margin: 0 20px;
+    }
+    nav .nav .logo {
+        font-size: 20px;
+    } 
+    nav .nav .menu-nav li {
+        padding: 0 10px;
+    }
+    nav .nav .menu-nav li a {
+        font-size: 13px;
+    }
+
+    nav.stiky .nav .menu-nav li a {
+        font-size: 10px;
+    }
+
+    /* header .container {
+        width: 10;
+    } */
+    header .container .description {
+        width: 200px;
+    }
+    header .container .description h1{
+        font-size: 20px;
+    }
+    header .container .description h2{
+        font-size: 20px;
+    }
+    header .container .description P{
+        font-size: 20px;
+        width: 200px;
+    }
+}
